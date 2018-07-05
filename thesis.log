@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  5 JUL 2018 13:57
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  5 JUL 2018 14:52
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -214,8 +214,7 @@ Package: multicol 2017/04/11 v1.8q multicolumn formatting (FMi)
 (/usr/local/texlive/2017/texmf-dist/tex/latex/setspace/setspace.sty
 Package: setspace 2011/12/19 v6.7a set line spacing
 )
-(/usr/local/texlive/2017/texmf-dist/tex/latex/braket/braket.sty)
-No file thesis.aux.
+(/usr/local/texlive/2017/texmf-dist/tex/latex/braket/braket.sty) (./thesis.aux)
 \openout1 = `thesis.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 9.
@@ -328,19 +327,20 @@ e
 {/usr/local/texlive/2017/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
 (./thesis.aux) ) 
 Here is how much of TeX's memory you used:
- 3049 strings out of 492995
- 41542 string characters out of 6132704
- 109272 words of memory out of 5000000
- 6575 multiletter control sequences out of 15000+600000
- 3940 words of font info for 15 fonts, out of 8000000 for 9000
+ 3056 strings out of 492995
+ 41614 string characters out of 6132704
+ 110272 words of memory out of 5000000
+ 6578 multiletter control sequences out of 15000+600000
+ 4545 words of font info for 17 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  39i,4n,32p,255b,111s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts
-/cm/cmr10.pfb>
-Output written on thesis.pdf (1 page, 12438 bytes).
+/cm/cmbx12.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/
+cm/cmr10.pfb>
+Output written on thesis.pdf (1 page, 25219 bytes).
 PDF statistics:
- 12 PDF objects out of 1000 (max. 8388607)
- 7 compressed objects within 1 object stream
+ 16 PDF objects out of 1000 (max. 8388607)
+ 10 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
