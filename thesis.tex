@@ -3,13 +3,17 @@
 \usepackage{graphicx}
 \usepackage{amsthm, amsmath, amssymb}
 \usepackage{multicol}
+\usepackage{float}
+\restylefloat{table}
 \usepackage{setspace}
+\usepackage{booktabs}
 \usepackage{braket}
 
 \begin{document}
 
 \begin{center}
-Thesis Placeholder
+\textbf{Random Forests for Medical Image Segmentation} \\ 
+Ben Kompa
 \end{center}
 
 \section{Introduction}
@@ -19,7 +23,124 @@ Thesis Placeholder
 \section{Methods} 
 
 \section{Results}
+%%%% Lung Train %%%%
+\begin{table}[H]
+\centering
+\begin{tabular}{@{}lll@{}}
+\toprule
+Structure & Mean Dice (Standard Deviation) & Median Dice (IQR) \\ \midrule
+Left Lung & 98.80\% (0.43\%) & 98.84\% (0.73\%) \\
+Left Lower Lobe & 97.72\% (0.71\%) & 97.95\% (0.96\%) \\
+Left Upper Lobe & 97.80\% (0.42\%) & 97.87\% (0.44\%) \\
+Right Lung & 98.99\% (0.45\%) & 99.09\% (0.44\%) \\
+Right Lower Lobe & 97.54\% (0.60\%) & 97.55\% (0.85\%) \\
+Right Upper Lobe & 97.62\% (0.57\%) & 97.73\% (0.55\%) \\
+Right Middle Lobe & 95.87\% (1.30\%) & 95.90\% (0.87\%) \\ \bottomrule
+\end{tabular}
+\caption{Train results for lung data set with N=30.}
+\label{lung-train}
+\end{table}
+%%% Lung test %%%
+\begin{table}[H]
+\centering
+\begin{tabular}{@{}lll@{}}
+\toprule
+Structure & Mean Dice (Standard Deviation) & Median Dice (IQR) \\ \midrule
+Left Lung & 97.54\% (2.83\%) & 98.47\% (1.12\%) \\
+Left Lower Lobe & 88.57\% (6.58\%) & 89.94\% (7.22\%) \\
+Left Upper Lobe & 89.13\% (9.36\%) & 92.29\% (6.77\%) \\
+Right Lung & 98.26\% (1.14\%) & 98.65\% (0.67\%) \\
+Right Lower Lobe & 90.19\% (4.66\%) & 92.31\% (5.21\%) \\
+Right Upper Lobe & 85.64\% (12.04\%) & 88.73\% (4.86\%) \\
+Right Middle Lobe & 73.03\% (14.10\%) & 75.78\% (17.02\%) \\ \bottomrule
+\end{tabular}
+\caption{Test results for lung data set with N=65.}
+\label{lung-test}
+\end{table}
 
+%%% SP train %%% 
+\begin{table}[H]
+\centering
+\begin{tabular}{@{}lll@{}}
+\toprule
+Structure & Mean Dice (Standard Deviation) & Median Dice (IQR) \\ \midrule
+Whole Tumor & 94.80\% (1.94\%) & 95.22\% (2.19\%) \\
+Tumor Core & 96.15\% (2.22\%) & 96.72\% (2.16\%) \\
+Edema & 87.84\% (8.95\%) & 90.40\% (5.24\%) \\ \bottomrule
+\end{tabular}
+\caption{SP-train}
+\label{Train results for glioblastoma data set with N=30.}
+\end{table}
+%%% SP test %%% 
+\begin{table}[H]
+\centering
+\begin{tabular}{@{}lll@{}}
+\toprule
+Structure & Mean Dice (Standard Deviation) & Median Dice (IQR) \\ \midrule
+Whole Tumor & 88.06\% (8.14\%) & 92.73\% (10.14\%) \\
+Tumor Core & 92.83\% (4.95\%) & 95.03\% (4.33\%) \\
+Edema & 64.95\% (26.44\%) & 73.09\% (25.93\%) \\ \bottomrule
+\end{tabular}
+\caption{Test results for glioblastoma data set with N=10.}
+\label{SP-test}
+\end{table}
+
+%%%HGG train%%%
+\begin{table}[H]
+\centering
+\begin{tabular}{@{}lll@{}}
+\toprule
+Structure & Mean Dice (Standard Deviation) & Median Dice (IQR) \\ \midrule
+Whole Tumor & 95.63\% (2.53\%) & 96.34\% (2.75\%) \\
+Tumor Core & 95.74\% (2.36\%) & 96.33\% (2.29\%) \\
+Edema & 90.73\% (6.07\%) & 92.17\% (5.09\%) \\
+Enhancing Tumor & 83.54\% (8.08\%) & 84.53\% (11.64\%) \\ \bottomrule
+\end{tabular}
+\caption{Train results for BRATS 2018 HGG tumors with N=75.}
+\label{brats-hgg-train}
+\end{table}
+%%%HGG test%%% 
+\begin{table}[H]
+\centering
+\begin{tabular}{@{}lll@{}}
+\toprule
+Structure & Mean Dice (Standard Deviation) & Median Dice (IQR) \\ \midrule
+Whole Tumor & 85.97\% (13.83\%) & 90.68\% (8.87\%) \\
+Tumor Core & 81.30\% (20.61\%) & 88.75\% (12.16\%) \\
+Edema & 73.84\% (17.92\%) & 80.31\% (22.47\%) \\
+Enhancing Tumor & 73.28\% (17.66\%) & 77.02\% (13.54\%) \\ \bottomrule
+\end{tabular}
+\caption{Test results for BRATS 2018 HGG tumors with N=135.}
+\label{brats-hgg-test}
+\end{table}
+%%%LGG train%%% 
+\begin{table}[H]
+\centering
+\begin{tabular}{@{}lll@{}}
+\toprule
+Structure       & Mean Dice (Standard Deviation) & Median Dice (IQR) \\ \midrule
+Whole Tumor     & 97.34\% (1.05\%)               & 97.54\% (1.25\%)  \\
+Tumor Core      & 95.64\% (2.16\%)               & 95.81\% (2.41\%)  \\
+Edema           & 87.08\% (8.00\%)               & 89.61\% (12.24\%) \\
+Enhancing Tumor & 53.40\% (43.33\%)              & 83.78\% (91.77\%) \\ \bottomrule
+\end{tabular}
+\caption{Train results for BRATS 2018 LGG tumors with N=30.}
+\label{brats-lgg-train}
+\end{table}
+%%% LGG test%%% 
+\begin{table}[H]
+\centering
+\begin{tabular}{@{}lll@{}}
+\toprule
+Structure & Mean Dice (Standard Deviation) & Median Dice (IQR) \\ \midrule
+Whole Tumor & 82.57\% (16.73\%) & 89.12\% (11.81\%) \\
+Tumor Core & 57.47\% (25.79\%) & 61.90\% (42.56\%) \\
+Edema & 52.00\% (19.73\%) & 55.92\% (22.16\%) \\
+Enhancing Tumor & 25.32\% (26.55\%) & 14.95\% (46.47\%) \\ \bottomrule
+\end{tabular}
+\caption{Test results for BRATS 2018 LGG tumors with N=45.}
+\label{brats-lgg-test}
+\end{table}
 \section{Future Work \& Conclusions}
 
 \end{document}
